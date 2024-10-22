@@ -1,0 +1,4 @@
+n=int(input())
+for i in range(n):
+    x,t=map(int,input().split())
+    print(x*t)
