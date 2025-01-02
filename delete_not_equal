@@ -1,0 +1,23 @@
+def all_zeros(s):
+    if '1' not in s:
+        return True
+    else:
+        return False
+def all_ones(s):
+    if '0' not in s:
+        return True
+    else:
+        return False
+        
+def strg():
+    t = int(input())
+    while(t):
+        n = int(input())
+        s = input()
+        if all_ones(s) or all_zeros(s):
+            print(n)
+        else:
+            print(1)
+        
+        t -= 1
+strg()
