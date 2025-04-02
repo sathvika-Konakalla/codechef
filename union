@@ -1,0 +1,10 @@
+SELECT product_id, SUM(quantity_sold) AS total_sales
+FROM (
+    SELECT product_id, quantity_sold FROM sales_2009
+    UNION ALL
+    SELECT product_id, quantity_sold FROM sales_2010
+    UNION ALL
+    SELECT product_id, quantity_sold FROM sales_2011
+) AS combined_sales
+GROUP BY product_id
+ORDER BY total_sales DESC;
