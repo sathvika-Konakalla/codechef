@@ -1,0 +1,32 @@
+# cook your dish here
+def max_ones_after_operations(t, test_cases):
+    results = []
+    for case in test_cases:
+        n, k, s = case
+        s = list(s)
+        
+        for _ in range(k):
+            changed = False
+            for i in range(n - 1):
+                if s[i] == '0' and s[i + 1] == '1':
+                    s[i] = '1'
+                    changed = True
+                    break
+            if not changed:
+                break
+        
+        results.append(s.count('1'))
+    
+    return results
+
+# Reading input
+t = int(input())
+test_cases = []
+for _ in range(t):
+    n, k = map(int, input().split())
+    s = input().strip()
+    test_cases.append((n, k, s))
+
+# Processing and printing output
+for result in max_ones_after_operations(t, test_cases):
+    print(result)
