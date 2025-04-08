@@ -1,0 +1,6 @@
+SELECT brand, 
+       ROUND(AVG(price + (SELECT AVG(price) FROM scooters)), 2) AS avg_price
+FROM scooters
+WHERE model IS NOT NULL AND model <> '' AND lights = 1
+GROUP BY brand
+ORDER BY avg_price ASC;
