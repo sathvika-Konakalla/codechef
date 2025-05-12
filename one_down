@@ -1,0 +1,18 @@
+def c(s,t):
+    s1=s.count('1')
+    t1=t.count('1')
+    for i,j in zip(s,t):
+        if j=='1' and i=='0':
+            return False
+    return (s1-t1) % 2 ==0
+def main():
+    t=int(input())
+    o24=[]
+    for i in range(t):
+        n=int(input())
+        s=input().strip()
+        tjg=input().strip()
+        o24.append("yes" if c(s,tjg) else "no")
+    print("\n".join(o24))
+if __name__=="__main__":
+    main()
