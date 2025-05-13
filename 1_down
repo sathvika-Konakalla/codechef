@@ -1,0 +1,21 @@
+# cook your dish here
+import sys
+input = sys.stdin.readline
+
+out = []
+for _ in range(int(input())):
+    n = int(input())
+    S = input().strip()
+    Tgt = input().strip()
+    cS = S.count('1')
+    cT = Tgt.count('1')
+    can_transform = True
+    for s_ch, t_ch in zip(S, Tgt):
+        if t_ch == '1' and s_ch == '0':
+            can_transform = False
+            break
+    if can_transform and (cS - cT) % 2 != 0: can_transform = False
+    
+    out.append("Yes" if can_transform else "No")
+
+print("\n".join(out))
