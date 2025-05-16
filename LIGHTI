@@ -1,0 +1,22 @@
+def solve():
+    n = int(input())
+    c = list(map(int, input().split()))
+    red_count = c.count(1)
+    blue_count = c.count(2)
+    unknown_count = c.count(0)
+    
+    if n % 2 != 0:
+        print("No")
+        return
+    
+    required_red = n // 2 - red_count
+    required_blue = n // 2 - blue_count
+    
+    if required_red < 0 or required_blue < 0 or required_red + required_blue > unknown_count:
+        print("No")
+    else:
+        print("Yes")
+
+t = int(input())
+for _ in range(t):
+    solve()
