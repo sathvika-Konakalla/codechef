@@ -1,0 +1,18 @@
+test = int(input())
+while(test):
+    count=0
+    n = list(map(int, input().split(" ")))
+    if (sum(n)/5>=7):
+        print ("0")
+    else:
+        n.sort()
+        su= sum(n)
+        # print ((35-(sum(n)/5)+1)*100)
+        for i in range(len(n)):
+            # print (su)
+            if ((su)<35):
+                n[i]=10  
+                count= count+1
+                su= sum (n)
+        print(count*100)
+    test= test -1 
