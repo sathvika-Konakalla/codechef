@@ -1,0 +1,9 @@
+for i in range(int(input())):
+    N = int(input())
+    A = list(map(int, input().split()))
+    c1= A.count(1)
+    c2 = A.count(2)
+    if c1 % 2 == 0:
+        print(min(c2, c1 // 2))
+    else:
+        print(c2)
