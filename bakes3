@@ -1,0 +1,10 @@
+t = int(input())
+for i in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+    ans = 0
+    for x in range(101):
+        s = sum(min(x, i) for i in a)
+        p = s * 50 - x * n * 30
+        ans = max(ans, p)
+    print(ans)
