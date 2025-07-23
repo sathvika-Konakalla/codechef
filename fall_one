@@ -1,0 +1,12 @@
+for i in range(int(input())):
+    N = int(input())
+    A = list(map(int, input().split()))
+    t=0
+    flag=True
+    for i in range(N):
+        t+=A[i]
+        avg=t/(i+1)
+        if avg < 40:
+            flag = False
+            break
+    print("Yes" if flag else "No")
