@@ -1,0 +1,18 @@
+# cook your dish here
+for i in range(int(input())):
+    N, C = map(int, input().split())  
+    A = list(map(int, input().split()))  
+    e=0
+    while True:
+        a=C + e
+        s=False
+        h=False
+        for friend in A:
+            if friend < a:
+                s= True
+            if friend == a:
+                h=True
+        if s and not h:
+            print(e)
+            break
+        e+= 1
