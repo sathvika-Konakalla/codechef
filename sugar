@@ -1,0 +1,29 @@
+def satisfaction(T, te):
+    res=[]
+    for t in range(T):
+        N = te[t][0]
+        A = te[t][1]
+        B = te[t][2]
+
+        s = float('-inf')
+        unique_Ls = set(B)
+        unique_Ls.add(0)  
+
+        for L in unique_Ls:
+            S = sum(a for a, b in zip(A, B) if b <= L and a > 0)
+            sati = S - L
+            s= max(s, sati)
+        res.append(s)
+    return res
+
+T = int(input())
+te= []
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    B = list(map(int, input().split()))
+    te.append((N, A, B))
+
+resu = satisfaction(T, te)
+for res in resu:
+    print(res)
