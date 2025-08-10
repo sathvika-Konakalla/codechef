@@ -1,0 +1,9 @@
+for i in range(int(input())):
+    n=int(input())
+    l=list(map(int,input().split()))
+    h=[]
+    for i in range(n-1):
+        h.append(l[i]+(l[i+1]//2))
+        for j in range(i+1,n):
+            h.append(l[i]+l[j])
+    print(min(h))
