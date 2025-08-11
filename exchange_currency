@@ -1,0 +1,16 @@
+T = int(input())
+for I in range(T):
+    A1, B1, A2, B2 = map(int, input().split())
+    numerator = -(B2 - B1 + 5*(A2 - A1))
+    if numerator < 0 or numerator % 6 != 0:
+        print("NO")
+        continue
+    z = numerator // 6
+    x_minus_y = (B2 - B1 + z) // 5
+    y_minus_x = A2 - A1 + z
+    
+    if x_minus_y != -y_minus_x:
+        print("NO")
+        continue
+    
+    print("YES")
