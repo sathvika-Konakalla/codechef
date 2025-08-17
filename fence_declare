@@ -1,0 +1,19 @@
+from collections import Counter
+T = int(input())
+for i in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+
+    if all(a == 1 for a in A):
+        print(0)
+        continue
+
+    freq = Counter(A)
+    max_freq = max(freq.values())
+
+
+    opt1 = sum(a != 1 for a in A)
+  
+    opt2 = 1 + (N - max_freq)
+
+    print(min(opt1, opt2))
