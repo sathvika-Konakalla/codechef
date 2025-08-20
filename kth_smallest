@@ -1,0 +1,4 @@
+class Solution:
+
+    def kthSmallest(self, arr,k):
+        return sorted(arr)[k-1]
