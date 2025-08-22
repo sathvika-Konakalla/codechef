@@ -1,0 +1,15 @@
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    A = list(map(int, input().split()))
+    
+    count = 1  
+    last_parity = A[0] % 2
+    
+    for i in range(1, N):
+        current_parity = A[i] % 2
+        if current_parity != last_parity:
+            count += 1
+            last_parity = current_parity
+    
+    print(count)
