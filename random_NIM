@@ -1,0 +1,12 @@
+MOD = 998244353
+INV2 = 499122177  
+
+t = int(input().strip())
+for i in range(t):
+    n = int(input().strip())
+    A = list(map(int, input().split()))
+    ones = sum(1 for x in A if x == 1)
+    if ones == n:
+        print(1 if n % 2 == 1 else 0)
+    else:
+        print(INV2)
