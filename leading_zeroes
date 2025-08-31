@@ -1,0 +1,13 @@
+ res=1
+
+        for i in range(len(arr)):
+
+            res*=arr[i]
+
+        if res>=1000000007:
+
+            return(res%1000000007)
+
+        else:
+
+            return(res)        
