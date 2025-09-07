@@ -1,0 +1,11 @@
+T = int(input())
+for i in range(T):
+    X, Y = map(int, input().split())
+    target = 50 - X
+    min_sum = 2 * Y
+    max_sum = 2 * Y + 10
+    if min_sum <= target <= max_sum:
+        print("Yes")
+    else:
+        print("No")
+        
