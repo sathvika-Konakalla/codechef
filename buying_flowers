@@ -1,0 +1,12 @@
+# cook your dish here
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    min_cost = float('inf')
+    for b in range(N // 3 + 1):
+        rem = N - 3 * b
+        if rem % 2 == 0:
+            a = rem // 2
+            cost = 4 * a + 5 * b
+            min_cost = min(min_cost, cost)
+    print(min_cost)
