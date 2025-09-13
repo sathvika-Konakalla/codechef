@@ -1,0 +1,15 @@
+for i in range(int(input())):
+    N=int(input())
+    q,r=divmod(N, 4)
+    if r==0:
+        ans=400 * q
+    elif r==1:
+        if q>=1:
+            ans=400*(q-1)+300+200
+        else:
+            ans=200
+    elif r==2:
+        ans=400*q+200
+    else: 
+        ans=400*q+300
+    print(ans)
