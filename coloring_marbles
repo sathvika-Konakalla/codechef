@@ -1,0 +1,12 @@
+T = int(input())
+for i in range(T):
+    N, M = map(int, input().split())
+    S = input()
+    alice_wins = S.count('1')
+    bob_wins = S.count('0')
+    remaining = N - M
+    diff = abs(alice_wins - bob_wins)
+    if diff <= remaining and (remaining - diff) % 2 == 0:
+        print("Yes")
+    else:
+        print("No")
