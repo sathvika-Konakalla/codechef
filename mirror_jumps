@@ -1,0 +1,10 @@
+# cook your dish here
+test_cases=int(input())
+for i in range(test_cases):
+    n,k=map(int,input().split())
+    if k>=(n/2) or k==n:
+        print(n-k)
+    else:
+        mirror_position=n-k
+        print(n-mirror_position)
+        
