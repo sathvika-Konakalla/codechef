@@ -1,0 +1,13 @@
+T = int(input().strip())
+for i in range(T):
+    N = int(input().strip())
+    A = list(map(int, input().split()))
+    
+    c1 = A.count(1)
+    c2 = A.count(2)
+    c3 = A.count(3)
+    pr = 0
+    pr += c1 * (c1 - 1) // 2  
+    pr+= c1 * c2             
+    pr+= c2 * c3           
+    print(pr)
