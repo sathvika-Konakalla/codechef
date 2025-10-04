@@ -1,0 +1,6 @@
+T = int(input().strip())
+for i in range(T):
+    N = int(input().strip())
+    mini= N - 2
+    maxi= (N - 1)*(N - 2) // 2
+    print(mini, maxi)
