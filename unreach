@@ -1,0 +1,20 @@
+import sys
+input = sys.stdin.readline
+
+t = int(input().strip())
+for _ in range(t):
+    n = int(input().strip())
+    a = list(map(int, input().split()))
+   
+    ones_par = [0, 0]  
+    for i, val in enumerate(a, start=1):
+        if val == 1:
+            ones_par[i % 2] += 1
+
+    answer = "No"
+    for i, val in enumerate(a, start=1):
+        if val == 2:
+            if ones_par[i % 2] == 0:
+                answer = "Yes"
+                break
+    print(answer)
