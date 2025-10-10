@@ -1,0 +1,17 @@
+# cook your dish here
+T = int(input())  
+for i in range(T):
+    N = int(input())
+    S = input().strip()
+
+    first = S.find('1')
+    last = S.rfind('1')
+
+    if first == -1:  
+        print(0)
+    else:
+        changes = 0
+        for i in range(first, last + 1):
+            if S[i] == '0':
+                changes += 1
+        print(changes)
