@@ -1,0 +1,10 @@
+WITH avg_watt AS (
+    SELECT AVG(watt) AS avg_val FROM enom_gilpane
+)
+
+SELECT 
+    part_id,
+    rpm,
+    watt + avg_val AS adjusted_watt,
+    size
+FROM enom_gilpane, avg_watt;
