@@ -1,0 +1,11 @@
+T = int(input())
+for _ in range(T):
+    X, Y = map(int, input().split())
+    seven = 0
+    sodd = 0
+    for num in range(X, Y + 1, X):
+        if num % 2 == 0:
+            seven += num
+        else:
+            sodd += num
+    print("YES" if seven >= sodd else "NO")
